@@ -1,0 +1,194 @@
+<!-- =========================
+FILE: index.html
+Website Promosi Wisata Sumatra Utara
+========================= -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Sumatra Utara</title>
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+const form = document.getElementById("contactForm");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  fetch("https://forms.gle/DTXFzUJxkF1z534o9", {
+    method: "POST",
+    body: data
+  })
+  .then(res => res.text())
+  .then(text => {
+    status.innerHTML = "✅ Pesan berhasil dikirim!";        
+    status.style.color = "green";
+    form.reset();
+  })
+  .catch(() => {
+    status.innerHTML = "❌ Gagal mengirim pesan.";
+    status.style.color = "red";
+  });
+});
+</script>
+
+<body>
+
+    <!-- =========================
+    HEADER / NAVBAR
+    ========================= -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo / Judul Website -->
+            <h1 class="logo">WISATA SUMATRA UTARA</h1>
+
+            <!-- Menu Navigasi -->
+            <ul class="nav-menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#destinasi">Destinasi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================
+    HERO SECTION
+    ========================= -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h2>Jelajahi Keindahan Sumatra Utara</h2>
+            <p>Sumatra Utara menyimpan pesona alam dan budaya yang luar biasa, mulai dari danau terbesar di Indonesia hingga pegunungan yang menakjubkan.</p>
+            <a href="#destinasi" class="btn">Lihat Destinasi</a>
+        </div>
+    </section>
+
+    <!-- =========================
+    DESTINASI WISATA
+    ========================= -->
+    <section id="destinasi" class="section">
+        <h2 class="section-title">Destinasi Wisata Populer</h2>
+
+        <div class="destinasi-container">
+            <!-- Danau Toba -->
+            <div class="destinasi-card">
+                <img src="images/danau-toba.jpg" alt="Danau Toba">
+                <h3>DANAU TOBA</h3>
+                <p>Danau vulkanik terbesar di Asia Tenggara dengan panorama alam yang menakjubkan.</p>
+            </div>
+
+            <!-- Pulau Samosir -->
+            <div class="destinasi-card">
+                <img src="images/pagoda.jpg" alt="pagoda">
+                <h3>PAGODA</h3>
+                <p>Pagoda di Kabupaten Karo, Sumatera Utara, yang terkenal adalah Pagoda Taman Alam Lumbini di Desa Tongkeh,
+                    Kecamatan Dolat Rayat, sebuah objek wisata religi dan budaya dengan bangunan pagoda emas megah yang merupakan replika Pagoda Shwedagon di Myanmar,
+                    serta mengenal keragaman budaya dan toleransi beragama di Sumatera Utara.</p>
+            </div>
+
+            <!-- Air Terjun Sipiso-piso -->
+            <div class="destinasi-card">
+                <img src="images/sipiso-piso.jpg" alt="Air Terjun Sipiso-piso">
+                <h3>AIR TERJUN SIPISO-PISO</h3>
+                <p>Air Terjun Sipiso-Piso adalah wisata alam terkenal di Kabupaten Karo, 
+                    Sumatera Utara, dan menawarkan pemandangan indah Danau Toba serta udara pegunungan yang sejuk.</p>
+            </div>
+
+            <!-- Bukit Holbung -->
+            <div class="destinasi-card">
+                <img src="images/sibea-bea.jpg" alt="sibea-bea">
+                <h3>SIBEA-BEA</h3>
+                <p>destinasi wisata alam dan religi populer di Kabupaten Samosir, Sumatera Utara,
+                    terkenal dengan pemandangan Danau Toba yang memukau, jalur jalan yang berkelok (Kelok 8) untuk berfoto,
+                    serta Patung Yesus Kristus setinggi 61 meter yang megah di puncaknya.</p>
+            </div>
+
+            <!-- Gunung Sibayak -->
+            <div class="destinasi-card">
+                <img src="images/sibayak.jpg" alt="Gunung Sibayak">
+                <h3>GUNUNG SIBAYAK</h3>
+                <p>Gunung berapi aktif yang populer untuk pendakian dan menikmati matahari terbit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+    GALERI FOTO
+    ========================= -->
+    <section id="galeri" class="section light">
+        <h2 class="section-title">Galeri Foto</h2>
+
+        <div class="galeri-grid">
+            <img src="images/danau toba.jpg" alt="Galeri 1">
+            <img src="images/gereja bukit holbung.jpg" alt="Galeri 2">
+            <img src="images/kolam-abadi-langkat.jpg" alt="Galeri 3">
+            <img src="images/sungai-palaruga.jpg" alt="Galeri 4">
+            <img src="images/sinabung.jpg" alt="Galeri 5">
+            <img src="images/pulau-berhala.jpg" alt="Galeri 6">
+            <img src="images/pulau.jpg" alt="Galeri 7">
+            <img src="images/nias-island.jpg" alt="Galeri 8">
+            <img src="images/pulau-weh.jpg" alt="Galeri 9">
+            <img src="images/weh-island.jpg" alt="Galeri 10">
+            <img src="images/11.jpg" alt="Galeri 11">
+            <img src="images/taman-alam-lumbini.jpg" alt="Galeri 12">
+            <img src="images/sibea-bea.jpg" alt="Galeri 13">
+            <img src="images/sibayak.jpg" alt="Galeri 14">
+
+        </div>
+    </section>
+
+    <!-- =========================
+    TENTANG SUMATRA UTARA
+    ========================= -->
+    <section id="tentang" class="section">
+        <h2 class="section-title">Tentang Sumatra Utara</h2>
+        <p class="tentang-text">
+            Sumatera Utara adalah provinsi di ujung utara Pulau Sumatera dengan ibu kota di Medan.
+            Terkenal dengan kekayaan budaya suku Batak dan Melayu, serta objek wisata ikonik.
+            Provinsi ini memiliki beragam etnis (Batak, Melayu, Jawa, Tionghoa) dan merupakan salah satu pusat ekonomi penting di Indonesia,
+            dengan batas wilayah Aceh, Riau, Sumatera Barat, Samudera Hindia, dan Selat Malaka, serta menyimpan keindahan alam di pesisir timur,
+            pegunungan, dan kepulauan Nias.
+            Sumatra Utara yang kaya akan keindahan alam, budaya Batak yang unik,
+            serta destinasi wisata yang beragam. Dari danau, gunung, hingga air terjun,
+            Sumatra Utara menawarkan pengalaman wisata yang tak terlupakan.
+        </p>
+    </section>
+
+    <!-- =========================
+    KONTAK
+    ========================= -->
+    <section id="kontak" class="contact-section">
+  <h2>Kontak Kami</h2>
+  <p class="contact-desc">
+    Silakan hubungi kami untuk informasi lebih lanjut
+  </p>
+
+  <div class="contact-card">
+    <form id="contactForm">
+      <input type="text" name="nama" placeholder="Nama" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="pesan" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+      <p id="status"></p>
+    </form>
+  </div>
+</section>
+
+
+    </section>
+
+    <!-- =========================
+    FOOTER
+    ========================= -->
+    <footer>
+        <p>&copy; 2025 Wisata Sumatra Utara. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
